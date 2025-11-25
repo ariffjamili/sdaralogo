@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDARA Logo Manual - Brand Guidelines</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #211D71, #3a3691);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(33, 29, 113, 0.3);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .logo-showcase {
+            text-align: center;
+            margin: 40px 0;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo-showcase img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-showcase img:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+        }
+
+        .section h2 {
+            color: #211D71;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #C4871D;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #211D71;
+            font-size: 1.5rem;
+            margin: 25px 0 15px 0;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .color-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .color-sample {
+            height: 100px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 15px;
+        }
+
+        .color-info h4 {
+            color: #211D71;
+            margin-bottom: 10px;
+        }
+
+        .color-values {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .primary-blue { background-color: #000065; }
+        .secondary-yellow { background-color: #FDDD00; }
+        .white-color { background-color: #FFFFFF; border: 1px solid #ddd; }
+        .red-color { background-color: #FD0403; }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .do-section, .dont-section {
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .do-section {
+            background: #e8f5e8;
+            border-left: 5px solid #28a745;
+        }
+
+        .dont-section {
+            background: #ffeaea;
+            border-left: 5px solid #dc3545;
+        }
+
+        .do-section h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .dont-section h4 {
+            color: #dc3545;
+            margin-bottom: 15px;
+        }
+
+        .specifications-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .specifications-table th,
+        .specifications-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specifications-table th {
+            background: #211D71;
+            color: white;
+            font-weight: 600;
+        }
+
+        .specifications-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .footer {
+            background: #211D71;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .navigation {
+            position: sticky;
+            top: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .navigation ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .navigation a {
+            color: #211D71;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.2s ease;
+        }
+
+        .navigation a:hover {
+            background: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navigation ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #C4871D, #d4941f);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h4 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>SDARA Logo Manual</h1>
+            <p>Brand Guidelines for Sekolah Dato' Abdul Razak Alumni</p>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History & Rationale</a></li>
+                <li><a href="#specifications">Technical Specifications</a></li>
+                <li><a href="#usage">Usage Guidelines</a></li>
+                <li><a href="#applications">Applications</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo-showcase">
+            <img src="sdara_logo.png" alt="SDARA Logo" />
+            <h3 style="margin-top: 20px; color: #211D71;">Official SDARA Logo</h3>
+        </div>
+
+        <section id="overview" class="section">
+            <h2>Overview</h2>
+            <p>This manual serves as the comprehensive guide for the proper use of the Sekolah Dato' Abdul Razak Alumni (SDARA) logo. It provides essential information for maintaining brand consistency across all applications, from merchandise and documents to digital platforms and promotional materials.</p>
+            
+            <div class="highlight-box">
+                <h4>Purpose of This Manual</h4>
+                <p>To ensure consistent and appropriate use of the SDARA logo across all platforms and materials, maintaining the integrity and recognition of the alumni association's brand identity.</p>
+            </div>
+            
+            <p>The SDARA logo is more than just a visual identifier; it represents the shared heritage, values, and enduring bond among former students of Sekolah Dato' Abdul Razak. Every application of this logo should reflect the dignity, excellence, and tradition that the institution embodies.</p>
+        </section>
+
+        <section id="history" class="section">
+            <h2>History & Rationale</h2>
+            
+            <h3>Historical Background</h3>
+            <p>The Sekolah Dato' Abdul Razak (SDAR) logo, which is also used by its alumni association (SDARA), embodies the rich history and core values of the institution. The school was established on May 1, 1956, in Johor Bahru, initially known as Sekolah Menengah Melayu (Malay Secondary School). Its formation was a direct result of the 'Penyata Razak' (Razak Report) of 1956, aiming to provide educational opportunities for bright Malay students.</p>
+            
+            <p>On November 29, 1958, the school was officially renamed Sekolah Dato' Abdul Razak, in honor of Dato' Abdul Razak Hussein, who was instrumental in the school's establishment and later became the second Prime Minister of Malaysia. This renaming marked a significant milestone in the school's identity, solidifying its connection to a key figure in Malaysian education and nation-building.</p>
+            
+            <h3>Logo Philosophy</h3>
+            <p>The school's official motto, "Berilmu Untuk Berjasa" (With Knowledge to Contribute), is a central tenet reflected in the logo's underlying philosophy. This motto emphasizes the importance of acquiring knowledge not just for personal gain, but for the betterment and service of the community and nation.</p>
+            
+            <h3>Design Elements & Symbolism</h3>
+            <p>While specific details about the exact design process of the logo are not readily available in public records, its elements are symbolic of the school's heritage and aspirations. The emblem, designed as a shield, incorporates elements that represent knowledge, strength, and national identity, consistent with the values of a premier Malaysian boarding school.</p>
+            
+            <p>The use of traditional Jawi script (سدارا) for the school's name at the top of the logo reinforces its cultural roots and Islamic identity, while the Latin script "SDARA" at the bottom ensures accessibility and recognition in contemporary contexts.</p>
+            
+            <h3>Alumni Association Significance</h3>
+            <p>For the Sekolah Dato' Abdul Razak Alumni (SDARA), the logo holds profound significance. It serves as a powerful symbol of pride, passion, and belonging, representing a shared heritage and the enduring bond among former students. The logo is a constant reminder of their formative years at SDAR and their ongoing connection to the institution and its mission of contributing to society. SDARA utilizes this logo to foster a sense of community, facilitate networking, and promote the values instilled by their alma mater in various alumni initiatives, merchandise, and official documents.</p>
+        </section>
+
+        <section id="specifications" class="section">
+            <h2>Technical Specifications</h2>
+            
+            <h3>Color Palette</h3>
+            <p>The SDARA logo utilizes a distinct color palette that reflects its heritage and values. Consistent use of these colors is essential for maintaining brand recognition and integrity.</p>
+            
+            <div class="color-palette">
+                <div class="color-card">
+                    <div class="color-sample primary-blue"></div>
+                    <div class="color-info">
+                        <h4>Primary Blue</h4>
+                        <div class="color-values">
+                            <strong>Hex:</strong> #00065<br>
+                            <strong>RGB:</strong> 0, 0, 101<br>
+                            <strong>CMYK:</strong> 100, 100, 31, 24<br>
+                            <strong>Pantone:</strong> 273 C (approx.)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample secondary-yellow"></div>
+                    <div class="color-info">
+                        <h4>Secondary Yellow</h4>
+                        <div class="color-values">
+                            <strong>Hex:</strong> #FDDD00<br>
+                            <strong>RGB:</strong> 253, 221, 0<br>
+                            <strong>CMYK:</strong> 246, 88.4, 100, 0<br>
+                            <strong>Pantone:</strong> YELLOW C (approx.)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample white-color"></div>
+                    <div class="color-info">
+                        <h4>White</h4>
+                        <div class="color-values">
+                            <strong>Hex:</strong> #FFFFF<br>
+                            <strong>RGB:</strong> 0, 0, 0<br>
+                            <strong>CMYK:</strong> 0, 0, 0, 0<br>
+                            <strong>Pantone:</strong> 000C WHITE
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample red-color"></div>
+                    <div class="color-info">
+                        <h4>Red</h4>
+                        <div class="color-values">
+                            <strong>Hex:</strong> #FD0403<br>
+                            <strong>RGB:</strong> 253, 4, 3<br>
+                            <strong>CMYK:</strong> 0, 100, 100, 0<br>
+                            <strong>Pantone:</strong> 185 C (approx.)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Color Usage Note</h4>
+                <p>The CMYK and Pantone values are approximate and should be verified with a professional color matching system for precise reproduction in commercial printing.</p>
+            </div>
+            
+            <h3>Typography</h3>
+            <p>The SDARA logo incorporates both Latin and Jawi scripts to represent its identity and heritage. Understanding these typographic elements is crucial for maintaining consistency in related materials.</p>
+            
+            <table class="specifications-table">
+                <thead>
+                    <tr>
+                        <th>Script Type</th>
+                        <th>Usage</th>
+                        <th>Characteristics</th>
+                        <th>Recommended Alternatives</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Latin Script</strong></td>
+                        <td>SDARA (bottom)</td>
+                        <td>Bold, uppercase, sans-serif</td>
+                        <td>Open Sans Bold, Montserrat Bold, Lato Black</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jawi Script</strong></td>
+                        <td>سدارا (top)</td>
+                        <td>Traditional calligraphic style</td>
+                        <td>Jawi Kufi, Jawi Nastaliq styles</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Motto Font</strong></td>
+                        <td>Berilmu Untuk Berjasa</td>
+                        <td>Cursive, flowing style</td>
+                        <td>Custom HV font (as referenced)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Size & Clear Space Requirements</h3>
+            <p>Proper sizing and clear space are essential for maintaining the logo's impact and legibility across all applications.</p>
+            
+            <table class="specifications-table">
+                <thead>
+                    <tr>
+                        <th>Application</th>
+                        <th>Minimum Size</th>
+                        <th>Clear Space</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Print Materials</strong></td>
+                        <td>20mm (0.8 inches) diameter</td>
+                        <td>X = Height of 'S' in SDARA</td>
+                        <td>Maintain detail and legibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Digital Applications</strong></td>
+                        <td>70 pixels diameter (72 dpi)</td>
+                        <td>X distance on all sides</td>
+                        <td>Ensure crisp rendering</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Large Format</strong></td>
+                        <td>No maximum limit</td>
+                        <td>Proportional scaling</td>
+                        <td>Maintain aspect ratio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="usage" class="section">
+            <h2>Usage Guidelines</h2>
+            <p>Proper usage of the SDARA logo ensures brand consistency and maintains the dignity of the alumni association. The following guidelines outline acceptable and unacceptable practices.</p>
+            
+            <div class="usage-grid">
+                <div class="do-section">
+                    <h4>✓ DO's</h4>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Use the logo in its original proportions</li>
+                        <li>Maintain adequate clear space around the logo</li>
+                        <li>Use approved color variations only</li>
+                        <li>Ensure high-resolution reproduction</li>
+                        <li>Place on appropriate backgrounds for contrast</li>
+                        <li>Scale proportionally when resizing</li>
+                        <li>Use for official SDARA communications</li>
+                        <li>Respect minimum size requirements</li>
+                        <li>Use approved file formats (PNG, SVG, EPS)</li>
+                        <li>Maintain the integrity of both Jawi and Latin scripts</li>
+                    </ul>
+                </div>
+                
+                <div class="dont-section">
+                    <h4>✗ DON'Ts</h4>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Stretch or distort the logo</li>
+                        <li>Change the colors or add new colors</li>
+                        <li>Rotate the logo at any angle</li>
+                        <li>Add effects, shadows, or outlines</li>
+                        <li>Place on busy or low-contrast backgrounds</li>
+                        <li>Use below minimum size requirements</li>
+                        <li>Separate elements of the logo</li>
+                        <li>Recreate or redraw the logo</li>
+                        <li>Use for commercial purposes without permission</li>
+                        <li>Modify the Jawi or Latin script elements</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Background Usage</h3>
+            <p>The logo should always be placed on backgrounds that provide sufficient contrast for optimal visibility and impact.</p>
+            
+            <div class="usage-grid">
+                <div class="do-section">
+                    <h4>Approved Backgrounds</h4>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>White or light neutral backgrounds</li>
+                        <li>Solid colors with high contrast</li>
+                        <li>Subtle patterns that don't interfere</li>
+                        <li>Professional photography with clear areas</li>
+                    </ul>
+                </div>
+                
+                <div class="dont-section">
+                    <h4>Avoid These Backgrounds</h4>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Busy patterns or textures</li>
+                        <li>Low contrast color combinations</li>
+                        <li>Gradients that interfere with legibility</li>
+                        <li>Images with competing visual elements</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications" class="section">
+            <h2>Applications</h2>
+            <p>The SDARA logo can be applied across various media and materials. Each application should follow the guidelines outlined in this manual to ensure consistency and professionalism.</p>
+            
+            <h3>Print Applications</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Business Cards:</strong> Use minimum 15mm diameter, ensure high contrast</li>
+                <li><strong>Letterheads:</strong> Position in header area with adequate clear space</li>
+                <li><strong>Brochures & Flyers:</strong> Maintain visibility hierarchy with other elements</li>
+                <li><strong>Merchandise:</strong> Consider fabric/material limitations, use appropriate size</li>
+                <li><strong>Banners & Signage:</strong> Scale appropriately for viewing distance</li>
+            </ul>
+            
+            <h3>Digital Applications</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Websites:</strong> Use PNG or SVG format for crisp rendering</li>
+                <li><strong>Social Media:</strong> Adapt size for platform requirements</li>
+                <li><strong>Email Signatures:</strong> Optimize file size while maintaining quality</li>
+                <li><strong>Presentations:</strong> Ensure visibility on projection screens</li>
+                <li><strong>Mobile Apps:</strong> Provide multiple resolutions for different devices</li>
+            </ul>
+            
+            <h3>Special Considerations</h3>
+            <div class="highlight-box">
+                <h4>Cultural Sensitivity</h4>
+                <p>Given the inclusion of Jawi script in the logo, ensure that all applications respect the cultural and religious significance of this element. The Jawi script should never be altered, rotated, or used inappropriately.</p>
+            </div>
+            
+            <h3>File Formats & Quality</h3>
+            <table class="specifications-table">
+                <thead>
+                    <tr>
+                        <th>Format</th>
+                        <th>Use Case</th>
+                        <th>Resolution</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>PNG</strong></td>
+                        <td>Digital applications, web</td>
+                        <td>300 DPI minimum</td>
+                        <td>Transparent background available</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SVG</strong></td>
+                        <td>Scalable digital use</td>
+                        <td>Vector format</td>
+                        <td>Ideal for responsive design</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EPS</strong></td>
+                        <td>Professional printing</td>
+                        <td>Vector format</td>
+                        <td>Industry standard for print</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JPG</strong></td>
+                        <td>General use, email</td>
+                        <td>300 DPI for print</td>
+                        <td>Use only when necessary</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sekolah Dato' Abdul Razak Alumni (SDARA). This logo manual is designed to ensure consistent and appropriate use of the SDARA brand identity.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">For questions regarding logo usage or to request additional formats, please contact the SDARA communications team.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
